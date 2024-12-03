@@ -1,0 +1,908 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		CF81B4C52CFE2C6300823EB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF81B4AB2CFE2C6200823EB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF81B4B22CFE2C6200823EB3;
+			remoteInfo = PressureRamMonitor;
+		};
+		CF81B4CF2CFE2C6300823EB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF81B4AB2CFE2C6200823EB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF81B4B22CFE2C6200823EB3;
+			remoteInfo = PressureRamMonitor;
+		};
+		CF81B4F82CFE34BF00823EB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF81B4AB2CFE2C6200823EB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF81B4E62CFE34BE00823EB3;
+			remoteInfo = PressureRam;
+		};
+		CF81B5022CFE34BF00823EB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF81B4AB2CFE2C6200823EB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF81B4E62CFE34BE00823EB3;
+			remoteInfo = PressureRam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF81B4B32CFE2C6200823EB3 /* PressureRamMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PressureRamMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF81B4C42CFE2C6300823EB3 /* PressureRamMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PressureRamMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF81B4CE2CFE2C6300823EB3 /* PressureRamMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PressureRamMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF81B4E72CFE34BE00823EB3 /* PressureRam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PressureRam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF81B4F72CFE34BF00823EB3 /* PressureRamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PressureRamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF81B5012CFE34BF00823EB3 /* PressureRamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PressureRamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CF35D9162CFE40D00026C9B1 /* Exceptions for "PressureRamMonitor" folder in "PressureRamMonitor" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CF81B4B22CFE2C6200823EB3 /* PressureRamMonitor */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CF81B4B52CFE2C6200823EB3 /* PressureRamMonitor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CF35D9162CFE40D00026C9B1 /* Exceptions for "PressureRamMonitor" folder in "PressureRamMonitor" target */,
+			);
+			path = PressureRamMonitor;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF81B4B02CFE2C6200823EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4C12CFE2C6300823EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4CB2CFE2C6300823EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4E42CFE34BE00823EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4F42CFE34BF00823EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4FE2CFE34BF00823EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF81B4AA2CFE2C6200823EB3 = {
+			isa = PBXGroup;
+			children = (
+				CF81B4B52CFE2C6200823EB3 /* PressureRamMonitor */,
+				CF81B4B42CFE2C6200823EB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF81B4B42CFE2C6200823EB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF81B4B32CFE2C6200823EB3 /* PressureRamMonitor.app */,
+				CF81B4C42CFE2C6300823EB3 /* PressureRamMonitorTests.xctest */,
+				CF81B4CE2CFE2C6300823EB3 /* PressureRamMonitorUITests.xctest */,
+				CF81B4E72CFE34BE00823EB3 /* PressureRam.app */,
+				CF81B4F72CFE34BF00823EB3 /* PressureRamTests.xctest */,
+				CF81B5012CFE34BF00823EB3 /* PressureRamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF81B4B22CFE2C6200823EB3 /* PressureRamMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF81B4D82CFE2C6300823EB3 /* Build configuration list for PBXNativeTarget "PressureRamMonitor" */;
+			buildPhases = (
+				CF81B4AF2CFE2C6200823EB3 /* Sources */,
+				CF81B4B02CFE2C6200823EB3 /* Frameworks */,
+				CF81B4B12CFE2C6200823EB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CF81B4B52CFE2C6200823EB3 /* PressureRamMonitor */,
+			);
+			name = PressureRamMonitor;
+			packageProductDependencies = (
+			);
+			productName = PressureRamMonitor;
+			productReference = CF81B4B32CFE2C6200823EB3 /* PressureRamMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF81B4C32CFE2C6300823EB3 /* PressureRamMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF81B4DB2CFE2C6300823EB3 /* Build configuration list for PBXNativeTarget "PressureRamMonitorTests" */;
+			buildPhases = (
+				CF81B4C02CFE2C6300823EB3 /* Sources */,
+				CF81B4C12CFE2C6300823EB3 /* Frameworks */,
+				CF81B4C22CFE2C6300823EB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF81B4C62CFE2C6300823EB3 /* PBXTargetDependency */,
+			);
+			name = PressureRamMonitorTests;
+			packageProductDependencies = (
+			);
+			productName = PressureRamMonitorTests;
+			productReference = CF81B4C42CFE2C6300823EB3 /* PressureRamMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF81B4CD2CFE2C6300823EB3 /* PressureRamMonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF81B4DE2CFE2C6300823EB3 /* Build configuration list for PBXNativeTarget "PressureRamMonitorUITests" */;
+			buildPhases = (
+				CF81B4CA2CFE2C6300823EB3 /* Sources */,
+				CF81B4CB2CFE2C6300823EB3 /* Frameworks */,
+				CF81B4CC2CFE2C6300823EB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF81B4D02CFE2C6300823EB3 /* PBXTargetDependency */,
+			);
+			name = PressureRamMonitorUITests;
+			packageProductDependencies = (
+			);
+			productName = PressureRamMonitorUITests;
+			productReference = CF81B4CE2CFE2C6300823EB3 /* PressureRamMonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CF81B4E62CFE34BE00823EB3 /* PressureRam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF81B5092CFE34BF00823EB3 /* Build configuration list for PBXNativeTarget "PressureRam" */;
+			buildPhases = (
+				CF81B4E32CFE34BE00823EB3 /* Sources */,
+				CF81B4E42CFE34BE00823EB3 /* Frameworks */,
+				CF81B4E52CFE34BE00823EB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PressureRam;
+			packageProductDependencies = (
+			);
+			productName = PressureRam;
+			productReference = CF81B4E72CFE34BE00823EB3 /* PressureRam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF81B4F62CFE34BF00823EB3 /* PressureRamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF81B50C2CFE34BF00823EB3 /* Build configuration list for PBXNativeTarget "PressureRamTests" */;
+			buildPhases = (
+				CF81B4F32CFE34BF00823EB3 /* Sources */,
+				CF81B4F42CFE34BF00823EB3 /* Frameworks */,
+				CF81B4F52CFE34BF00823EB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF81B4F92CFE34BF00823EB3 /* PBXTargetDependency */,
+			);
+			name = PressureRamTests;
+			packageProductDependencies = (
+			);
+			productName = PressureRamTests;
+			productReference = CF81B4F72CFE34BF00823EB3 /* PressureRamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF81B5002CFE34BF00823EB3 /* PressureRamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF81B50F2CFE34BF00823EB3 /* Build configuration list for PBXNativeTarget "PressureRamUITests" */;
+			buildPhases = (
+				CF81B4FD2CFE34BF00823EB3 /* Sources */,
+				CF81B4FE2CFE34BF00823EB3 /* Frameworks */,
+				CF81B4FF2CFE34BF00823EB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF81B5032CFE34BF00823EB3 /* PBXTargetDependency */,
+			);
+			name = PressureRamUITests;
+			packageProductDependencies = (
+			);
+			productName = PressureRamUITests;
+			productReference = CF81B5012CFE34BF00823EB3 /* PressureRamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF81B4AB2CFE2C6200823EB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					CF81B4B22CFE2C6200823EB3 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					CF81B4C32CFE2C6300823EB3 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CF81B4B22CFE2C6200823EB3;
+					};
+					CF81B4CD2CFE2C6300823EB3 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CF81B4B22CFE2C6200823EB3;
+					};
+					CF81B4E62CFE34BE00823EB3 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					CF81B4F62CFE34BF00823EB3 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CF81B4E62CFE34BE00823EB3;
+					};
+					CF81B5002CFE34BF00823EB3 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CF81B4E62CFE34BE00823EB3;
+					};
+				};
+			};
+			buildConfigurationList = CF81B4AE2CFE2C6200823EB3 /* Build configuration list for PBXProject "PressureRamMonitor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF81B4AA2CFE2C6200823EB3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CF81B4B42CFE2C6200823EB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF81B4B22CFE2C6200823EB3 /* PressureRamMonitor */,
+				CF81B4C32CFE2C6300823EB3 /* PressureRamMonitorTests */,
+				CF81B4CD2CFE2C6300823EB3 /* PressureRamMonitorUITests */,
+				CF81B4E62CFE34BE00823EB3 /* PressureRam */,
+				CF81B4F62CFE34BF00823EB3 /* PressureRamTests */,
+				CF81B5002CFE34BF00823EB3 /* PressureRamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF81B4B12CFE2C6200823EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4C22CFE2C6300823EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4CC2CFE2C6300823EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4E52CFE34BE00823EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4F52CFE34BF00823EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4FF2CFE34BF00823EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF81B4AF2CFE2C6200823EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4C02CFE2C6300823EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4CA2CFE2C6300823EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4E32CFE34BE00823EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4F32CFE34BF00823EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF81B4FD2CFE34BF00823EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF81B4C62CFE2C6300823EB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF81B4B22CFE2C6200823EB3 /* PressureRamMonitor */;
+			targetProxy = CF81B4C52CFE2C6300823EB3 /* PBXContainerItemProxy */;
+		};
+		CF81B4D02CFE2C6300823EB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF81B4B22CFE2C6200823EB3 /* PressureRamMonitor */;
+			targetProxy = CF81B4CF2CFE2C6300823EB3 /* PBXContainerItemProxy */;
+		};
+		CF81B4F92CFE34BF00823EB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF81B4E62CFE34BE00823EB3 /* PressureRam */;
+			targetProxy = CF81B4F82CFE34BF00823EB3 /* PBXContainerItemProxy */;
+		};
+		CF81B5032CFE34BF00823EB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF81B4E62CFE34BE00823EB3 /* PressureRam */;
+			targetProxy = CF81B5022CFE34BF00823EB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CF81B4D62CFE2C6300823EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF81B4D72CFE2C6300823EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CF81B4D92CFE2C6300823EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PressureRamMonitor/PressureRamMonitor.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PressureRamMonitor/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PressureRamMonitor/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		CF81B4DA2CFE2C6300823EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PressureRamMonitor/PressureRamMonitor.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PressureRamMonitor/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PressureRamMonitor/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		CF81B4DC2CFE2C6300823EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PressureRamMonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PressureRamMonitor";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		CF81B4DD2CFE2C6300823EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PressureRamMonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PressureRamMonitor";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		CF81B4DF2CFE2C6300823EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = PressureRamMonitor;
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		CF81B4E02CFE2C6300823EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = PressureRamMonitor;
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		CF81B50A2CFE34BF00823EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PressureRam/PressureRam.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PressureRam/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CF81B50B2CFE34BF00823EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PressureRam/PressureRam.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PressureRam/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CF81B50D2CFE34BF00823EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PressureRam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PressureRam";
+			};
+			name = Debug;
+		};
+		CF81B50E2CFE34BF00823EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PressureRam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PressureRam";
+			};
+			name = Release;
+		};
+		CF81B5102CFE34BF00823EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PressureRam;
+			};
+			name = Debug;
+		};
+		CF81B5112CFE34BF00823EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Joao.PressureRamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PressureRam;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF81B4AE2CFE2C6200823EB3 /* Build configuration list for PBXProject "PressureRamMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF81B4D62CFE2C6300823EB3 /* Debug */,
+				CF81B4D72CFE2C6300823EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF81B4D82CFE2C6300823EB3 /* Build configuration list for PBXNativeTarget "PressureRamMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF81B4D92CFE2C6300823EB3 /* Debug */,
+				CF81B4DA2CFE2C6300823EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF81B4DB2CFE2C6300823EB3 /* Build configuration list for PBXNativeTarget "PressureRamMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF81B4DC2CFE2C6300823EB3 /* Debug */,
+				CF81B4DD2CFE2C6300823EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF81B4DE2CFE2C6300823EB3 /* Build configuration list for PBXNativeTarget "PressureRamMonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF81B4DF2CFE2C6300823EB3 /* Debug */,
+				CF81B4E02CFE2C6300823EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF81B5092CFE34BF00823EB3 /* Build configuration list for PBXNativeTarget "PressureRam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF81B50A2CFE34BF00823EB3 /* Debug */,
+				CF81B50B2CFE34BF00823EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF81B50C2CFE34BF00823EB3 /* Build configuration list for PBXNativeTarget "PressureRamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF81B50D2CFE34BF00823EB3 /* Debug */,
+				CF81B50E2CFE34BF00823EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF81B50F2CFE34BF00823EB3 /* Build configuration list for PBXNativeTarget "PressureRamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF81B5102CFE34BF00823EB3 /* Debug */,
+				CF81B5112CFE34BF00823EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF81B4AB2CFE2C6200823EB3 /* Project object */;
+}
