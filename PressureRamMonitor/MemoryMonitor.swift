@@ -2,12 +2,13 @@ import Foundation
 import AppKit
 import Darwin
 
-class MemoryMonitor: ObservableObject {
+class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
     var statusItem: NSStatusItem!
     var menu: NSMenu!
     var lastPressure: String?
     
-    init() {
+    required override init() {
+        super.init()
         DispatchQueue.main.async {
             self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
             
@@ -18,41 +19,97 @@ class MemoryMonitor: ObservableObject {
     
     func createMenu() {
         menu = NSMenu()
+        menu.delegate = self
         
         let statusMenu = NSMenuItem(title: "Status: Loading...", action: nil, keyEquivalent: "")
         statusMenu.target = self
         menu.addItem(statusMenu)
         
-        let quitItem = NSMenuItem(title: "STOP Application", action: #selector(quit), keyEquivalent: "q")
-        quitItem.target = self
-        menu.addItem(quitItem)
+        let swapMemoryItem = NSMenuItem(title: "Swap: Loading...", action: nil, keyEquivalent: "")
+        swapMemoryItem.target = self
+        menu.addItem(swapMemoryItem)
         
         statusItem.menu = menu
     }
-    
+
     @objc func quit() {
         NSStatusBar.system.removeStatusItem(statusItem)
         NSApp.terminate(nil)
     }
     
     func startMonitoring() {
-        Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(updateMemoryUsage), userInfo: nil, repeats: true)
-        updateMemoryUsage()
+        Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(updateStatus), userInfo: nil, repeats: true)
+        updateStatus()
     }
     
-    @objc func updateMemoryUsage() {
+    @objc func updateStatus() {
         let currentPressure = getMemoryPressure()
-        
-        if let statusMenu = self.menu.items.first(where: { $0.title.contains("Status") }) {
-            statusMenu.title = "Status: \(currentPressure.capitalized)"
-        }
-        
+
         if currentPressure != lastPressure {
             DispatchQueue.main.async {
                 self.statusItem.button?.image = self.getImageForPressure(currentPressure)
+                if let statusMenu = self.menu.items.first(where: { $0.title.contains("Status") }) {
+                    statusMenu.title = "Status: \(currentPressure.capitalized)"
+                }
             }
             lastPressure = currentPressure
         }
+
+        updateMemoryMenuItems()
+    }
+
+    func updateMemoryMenuItems() {
+        var vmStats = vm_statistics64()
+        var count = mach_msg_type_number_t(MemoryLayout.size(ofValue: vmStats) / MemoryLayout<Int32>.size)
+        let hostPort = mach_host_self()
+
+        let result = withUnsafeMutablePointer(to: &vmStats) {
+            $0.withMemoryRebound(to: integer_t.self, capacity: Int(count)) {
+                host_statistics64(hostPort, HOST_VM_INFO64, $0, &count)
+            }
+        }
+
+        guard result == KERN_SUCCESS else {
+            return
+        }
+        
+        let swapMemory = getSwapMemory()
+
+        DispatchQueue.main.async {
+            if let swapMemoryItem = self.menu.items.first(where: { $0.title.contains("Swap") }) {
+                swapMemoryItem.title = "Swap: \(self.formatMemoryMB(swapMemory.used))"
+            }
+        }
+    }
+
+    func formatMemory(_ bytes: UInt64) -> String {
+        let gigabytes = Double(bytes) / (1024 * 1024 * 1024)
+        return String(format: "%.2f GB", gigabytes)
+    }
+    
+    func formatMemoryMB(_ bytes: UInt64) -> String {
+        let megabytes = Double(bytes) / (1024 * 1024)
+        return String(format: "%.2f MB", megabytes)
+    }
+    
+    func getSwapMemory() -> (used: UInt64, total: UInt64) {
+        var xswUsage = xsw_usage()
+        var size = MemoryLayout<xsw_usage>.size
+
+        let result = sysctlbyname("vm.swapusage", &xswUsage, &size, nil, 0)
+        guard result == 0 else {
+            print("Error fetching swap memory")
+            return (0, 0)
+        }
+
+        let usedSwap = xswUsage.xsu_used
+        let totalSwap = xswUsage.xsu_total
+
+        return (used: usedSwap, total: totalSwap)
+    }
+    
+    func menuWillOpen(_ menu: NSMenu) {
+        updateMemoryMenuItems()
     }
     
     func getImageForPressure(_ pressure: String) -> NSImage? {
@@ -62,7 +119,40 @@ class MemoryMonitor: ObservableObject {
             case "caution":
                 return NSImage(systemSymbolName: "exclamationmark.triangle", accessibilityDescription: "Caution Memory")
             case "severe":
-                return NSImage(systemSymbolName: "xmark.octagon", accessibilityDescription: "Severe Memory")
+                let image = NSImage(systemSymbolName: "xmark.octagon", accessibilityDescription: "Severe Memory")
+                let text = "SEVERE"
+                
+                let textSize = text.size(withAttributes: [
+                    .font: NSFont.systemFont(ofSize: 12),
+                    .foregroundColor: NSColor.black
+                ])
+                
+                let size = CGSize(width: (image?.size.width ?? 50) + textSize.width + 5,
+                                  height: max(image?.size.height ?? 50, textSize.height))
+                
+                let imageWithText = NSImage(size: size)
+                
+                imageWithText.lockFocus()
+                
+                image?.draw(at: NSPoint(x: 0, y: (size.height - (image?.size.height ?? 0)) / 2),
+                            from: NSRect(origin: .zero, size: image?.size ?? .zero),
+                            operation: .sourceOver, fraction: 1.0)
+                
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.alignment = .left
+                let attributes: [NSAttributedString.Key: Any] = [
+                    .font: NSFont.systemFont(ofSize: 12),
+                    .foregroundColor: NSColor.black,
+                    .paragraphStyle: paragraphStyle
+                ]
+                
+                let textRect = NSRect(x: (image?.size.width ?? 50) + 5, y: (size.height - textSize.height) / 2,
+                                      width: textSize.width, height: textSize.height)
+                text.draw(in: textRect, withAttributes: attributes)
+                
+                imageWithText.unlockFocus()
+                
+                return imageWithText
             default:
                 return nil
         }
