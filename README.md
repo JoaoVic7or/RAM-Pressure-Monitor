@@ -22,7 +22,10 @@ This is a simple macOS app that monitors the system's RAM pressure and displays 
 - The app uses Timer to update the RAM status every 7 seconds.
 - It queries the system for memory pressure status using the sysctlbyname("kern.memorystatus_vm_pressure_level") function.
 Example:<br/>
-![Model](https://iili.io/21W1HjR.png)
+![Screenshot 1](screenshot%201.png) <br/>
+![Screenshot 2](screenshot%202.png)
+
+<b>- Image changes based on RAM memory status </b>
 
 ## Memory Pressure Levels
 - Normal: The system has enough free memory.
