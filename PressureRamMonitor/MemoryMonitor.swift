@@ -38,7 +38,7 @@ class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
         let view = NSView(frame: NSRect(x: 0, y: 0, width: 130, height: 22))
 
         let label = NSTextField(labelWithString: text)
-        label.textColor = .black
+        label.textColor = .labelColor // Cor dinâmica para se ajustar ao tema do sistema
         label.font = NSFont.systemFont(ofSize: 12)
         label.alignment = .left
         label.isBordered = false
