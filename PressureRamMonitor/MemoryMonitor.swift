@@ -20,16 +20,34 @@ class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
     func createMenu() {
         menu = NSMenu()
         menu.delegate = self
-        
-        let statusMenu = NSMenuItem(title: "Status: Loading...", action: nil, keyEquivalent: "")
-        statusMenu.target = self
+
+        let statusView = createCustomMenuItemView(text: "Status: Loading...")
+        let statusMenu = NSMenuItem()
+        statusMenu.view = statusView
         menu.addItem(statusMenu)
-        
-        let swapMemoryItem = NSMenuItem(title: "Swap: Loading...", action: nil, keyEquivalent: "")
-        swapMemoryItem.target = self
+
+        let swapView = createCustomMenuItemView(text: "Swap: Loading...")
+        let swapMemoryItem = NSMenuItem()
+        swapMemoryItem.view = swapView
         menu.addItem(swapMemoryItem)
-        
+
         statusItem.menu = menu
+    }
+    
+    func createCustomMenuItemView(text: String) -> NSView {
+        let view = NSView(frame: NSRect(x: 0, y: 0, width: 130, height: 22))
+
+        let label = NSTextField(labelWithString: text)
+        label.textColor = .black
+        label.font = NSFont.systemFont(ofSize: 12)
+        label.alignment = .left
+        label.isBordered = false
+        label.drawsBackground = false
+        
+        label.frame = NSRect(x: 10, y: -3, width: 110, height: 22)
+
+        view.addSubview(label)
+        return view
     }
 
     @objc func quit() {
@@ -48,8 +66,10 @@ class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
         if currentPressure != lastPressure {
             DispatchQueue.main.async {
                 self.statusItem.button?.image = self.getImageForPressure(currentPressure)
-                if let statusMenu = self.menu.items.first(where: { $0.title.contains("Status") }) {
-                    statusMenu.title = "Status: \(currentPressure.capitalized)"
+                if let statusMenu = self.menu.items.first, let statusView = statusMenu.view {
+                    if let label = statusView.subviews.first as? NSTextField {
+                        label.stringValue = "Status: \(currentPressure.capitalized)"
+                    }
                 }
             }
             lastPressure = currentPressure
@@ -57,6 +77,7 @@ class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
 
         updateMemoryMenuItems()
     }
+
 
     func updateMemoryMenuItems() {
         var vmStats = vm_statistics64()
@@ -76,8 +97,10 @@ class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
         let swapMemory = getSwapMemory()
 
         DispatchQueue.main.async {
-            if let swapMemoryItem = self.menu.items.first(where: { $0.title.contains("Swap") }) {
-                swapMemoryItem.title = "Swap: \(self.formatMemoryMB(swapMemory.used))"
+            if let swapMemoryItem = self.menu.items.last, let swapView = swapMemoryItem.view {
+                if let label = swapView.subviews.first as? NSTextField {
+                    label.stringValue = "Swap: \(self.formatMemoryMB(swapMemory.used))"
+                }
             }
         }
     }
