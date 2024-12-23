@@ -1,6 +1,6 @@
 # RAM Pressure Monitor for macOS
 
-This is a simple macOS app that monitors the system's RAM pressure and displays the current status in the menu bar. The app updates every 7 seconds and provides the status of the system's memory, showing whether it's in a **normal**, **caution**, or **severe** state.
+<b>I don't have the Apple Developer Program, so when you open the program it says "Apple was unable to verify... is free of malware that could harm your Mac or compromise your privacy".</b>
 
 ## Features
 
