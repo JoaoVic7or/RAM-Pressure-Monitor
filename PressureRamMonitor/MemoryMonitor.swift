@@ -2,6 +2,18 @@ import Foundation
 import AppKit
 import Darwin
 
+extension NSImage {
+    func tinted(with color: NSColor) -> NSImage {
+        let image = self.copy() as! NSImage
+        image.lockFocus()
+        color.set()
+        let imageRect = NSRect(origin: .zero, size: image.size)
+        imageRect.fill(using: .sourceAtop)
+        image.unlockFocus()
+        return image
+    }
+}
+
 class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
     var statusItem: NSStatusItem!
     var menu: NSMenu!
@@ -140,7 +152,42 @@ class MemoryMonitor: NSObject, ObservableObject, NSMenuDelegate {
             case "normal":
                 return NSImage(systemSymbolName: "checkmark.circle", accessibilityDescription: "Normal Memory")
             case "caution":
-                return NSImage(systemSymbolName: "exclamationmark.triangle", accessibilityDescription: "Caution Memory")
+                var image = NSImage(systemSymbolName: "exclamationmark.triangle", accessibilityDescription: "Caution Memory")
+                image = image?.withSymbolConfiguration(.init(pointSize: 12, weight: .regular))?.tinted(with: .white)
+                let text = "CAUTION"
+                
+                let textSize = text.size(withAttributes: [
+                    .font: NSFont.systemFont(ofSize: 12),
+                    .foregroundColor: NSColor.white
+                ])
+            
+                let size = CGSize(width: (image?.size.width ?? 50) + textSize.width + 5,
+                                  height: max(image?.size.height ?? 50, textSize.height))
+                
+                let imageWithText = NSImage(size: size)
+                
+                imageWithText.lockFocus()
+                
+                image?.draw(at: NSPoint(x: 0, y: (size.height - (image?.size.height ?? 0)) / 2),
+                            from: NSRect(origin: .zero, size: image?.size ?? .zero),
+                            operation: .sourceOver, fraction: 1.0)
+                
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.alignment = .left
+                let attributes: [NSAttributedString.Key: Any] = [
+                    .font: NSFont.systemFont(ofSize: 12),
+                    .foregroundColor: NSColor.white,
+                    .paragraphStyle: paragraphStyle
+                ]
+                
+                let textRect = NSRect(x: (image?.size.width ?? 50) + 5, y: (size.height - textSize.height) / 2,
+                                      width: textSize.width, height: textSize.height)
+                text.draw(in: textRect, withAttributes: attributes)
+                
+                imageWithText.unlockFocus()
+            
+                return imageWithText;
+                
             case "severe":
                 let image = NSImage(systemSymbolName: "xmark.octagon", accessibilityDescription: "Severe Memory")
                 let text = "SEVERE"
